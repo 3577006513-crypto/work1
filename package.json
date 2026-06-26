@@ -1,0 +1,18 @@
+{
+  "name": "gesture-particle-cinema",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "postinstall": "node scripts/copy-mediapipe.mjs",
+    "dev": "vite --host 0.0.0.0",
+    "build": "node scripts/copy-mediapipe.mjs && vite build",
+    "preview": "vite preview --host 0.0.0.0"
+  },
+  "dependencies": {
+    "@mediapipe/hands": "^0.4.1675469240",
+    "gsap": "^3.12.5",
+    "three": "^0.165.0",
+    "vite": "^8.1.0"
+  }
+}
