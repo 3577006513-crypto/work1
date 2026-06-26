@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+    <meta name="theme-color" content="#fff2f8" />
+    <meta name="description" content="电影级手势粒子交互网页" />
+    <title>Gesture Particle Cinema</title>
+    <script type="module" crossorigin src="./assets/index-B0OuuU1n.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-B60o6Bmz.css">
+  </head>
+  <body>
+    <div id="app">
+      <canvas id="stage" aria-label="gesture particle stage"></canvas>
+
+      <video id="camera" playsinline muted></video>
+
+      <main class="hud" aria-live="polite">
+        <section class="hero" id="hero">
+          <div class="orb orb-a"></div>
+          <div class="orb orb-b"></div>
+          <p class="eyebrow">MediaPipe Hands · Three.js · GSAP</p>
+          <h1>手势唤醒粒子星河</h1>
+          <p class="subtitle">用食指牵引光点，用双手塑造爱心。所有识别和渲染都在本地前端完成。</p>
+          <button class="primary-button" id="startButton" type="button">
+            <span>开始体验</span>
+          </button>
+          <p class="hint">请在 HTTPS 或 localhost 环境打开，允许摄像头权限。</p>
+        </section>
+
+        <section class="status-panel" id="statusPanel">
+          <div>
+            <span class="dot" id="healthDot"></span>
+            <span id="statusText">等待启动</span>
+          </div>
+          <div id="gestureText">手势：--</div>
+          <div id="qualityText">质量：自动</div>
+        </section>
+      </main>
+
+      <div class="permission-card" id="permissionCard" hidden>
+        <strong>摄像头不可用</strong>
+        <span id="permissionText">请检查浏览器权限设置后刷新页面。</span>
+      </div>
+    </div>
+  </body>
+</html>
